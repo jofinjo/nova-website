@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -45,13 +45,12 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-18 py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-fuchsia-500 to-blue-600 flex items-center justify-center shadow-md shadow-fuchsia-500/30 group-hover:shadow-fuchsia-500/50 transition-shadow">
-            <Zap size={16} className="text-white fill-white" />
-          </div>
-          <span className="text-white font-semibold text-lg tracking-tight">
-            Nova<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-blue-500">Neuron</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img
+            src="/novaneuron_logo.psd.png"
+            alt="NovaNeuron"
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+          />
         </Link>
 
         {/* Desktop nav */}
