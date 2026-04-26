@@ -106,12 +106,11 @@ export default function SoftwareTesting() {
       {/* Stats */}
       <section className="border-y border-slate-800/60 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map(({ value, label }) => {
-            const colors = ['bg-gradient-to-r from-fuchsia-500 to-purple-500', 'bg-gradient-to-r from-purple-500 to-blue-500', 'bg-gradient-to-r from-blue-500 to-cyan-500', 'bg-gradient-to-r from-cyan-500 to-fuchsia-500'];
-            const color = colors[stats.indexOf({value, label} as any) % colors.length];
+          {stats.map(({ value, label }, index) => {
+            const colors = ['from-fuchsia-500 to-purple-500', 'from-purple-500 to-blue-500', 'from-blue-500 to-cyan-500', 'from-cyan-500 to-fuchsia-500'];
             return (
               <div key={label}>
-                <p className="text-3xl font-bold text-white mb-1">{value}</p>
+                <p className={`text-3xl font-bold mb-1 bg-gradient-to-r ${colors[index % colors.length]} bg-clip-text text-transparent`}>{value}</p>
                 <p className="text-slate-400 text-sm">{label}</p>
               </div>
             );

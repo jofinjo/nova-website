@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import {
   Heart, Users, Zap, Globe, ArrowRight,
-  Coffee, BookOpen, Shield
+  Coffee, BookOpen, Shield, TrendingUp
 } from 'lucide-react';
 
 const values = [
