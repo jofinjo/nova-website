@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Zap, Linkedin, Twitter, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,28 +7,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-fuchsia-500 to-blue-600 flex items-center justify-center shadow-md shadow-fuchsia-500/30">
-                <Zap size={16} className="text-white fill-white" />
-              </div>
-              <span className="text-white font-semibold text-lg tracking-tight">
-                Nova<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-blue-500">Neuron</span>
-              </span>
+            <Link to="/" className="flex items-center mb-4">
+              <img
+                src="/novaneuron_logo_white.png"
+                alt="NovaNeuron"
+                className="h-7 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Empowering businesses with intelligent AI solutions and rigorous software quality assurance.
             </p>
-            <div className="flex gap-4 mt-5">
-              {[Linkedin, Twitter, Github].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-colors"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
