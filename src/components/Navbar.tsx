@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center group">
           <img
-            src="/novaneuron_logo.psd.png"
+            src="/novaneuron_logo.png"
             alt="NovaNeuron"
             className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
           />
